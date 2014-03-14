@@ -38,7 +38,7 @@ var myappControllers =  angular.module('myApp.controllers', []);
 		
             
             
-            scope.getExpensesData("http://localhost:8282/app/webresources/expenses?month="+scope.month, null);
+            scope.getExpensesData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/expenses?month="+scope.month, null);
 	}
         
         
@@ -47,7 +47,7 @@ var myappControllers =  angular.module('myApp.controllers', []);
                 //get current month
                 //get all bucket types
                 
-		scope.getBalanceData("http://localhost:8282/app/webresources/expenses/balance?month="+scope.month, null);
+		scope.getBalanceData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/expenses/balance?month="+scope.month, null);
 	}
        
   }]);
@@ -76,7 +76,7 @@ var myappControllers =  angular.module('myApp.controllers', []);
            scope.expenseform.id='1'; 
            scope.expenseform.date=currentdate;
             console.log(scope.expenseform);
-            scope.postData("http://localhost:8282/app/webresources/expenses", scope.expenseform);
+            scope.postData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/expenses", scope.expenseform);
             scope.expenseform='';
         }
         
@@ -91,7 +91,7 @@ var myappControllers =  angular.module('myApp.controllers', []);
 		});
 	}	
 	scope.getBuckets = function() {		
-		scope.getData("http://localhost:8282/app/webresources/bucketlimits", null);
+		scope.getData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/bucketlimits", null);
 	}
   }]);
   
@@ -111,14 +111,14 @@ var myappControllers =  angular.module('myApp.controllers', []);
        scope.saveNewBucket = function(){
            scope.bucketform.bucketTypeId='1'; 
            console.log(scope.bucketform);
-           scope.postData("http://localhost:8282/app/webresources/bucketlimits", scope.bucketform);
+           scope.postData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/bucketlimits", scope.bucketform);
            scope.bucketform='';
         }
        
         scope.updateBucket = function(){
            
            console.log(scope.bucketform);
-           scope.postData("http://localhost:8282/app/webresources/bucketlimits", scope.bucketform.bucketTypeId);
+           scope.postData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/bucketlimits", scope.bucketform.bucketTypeId);
         }
         
       
@@ -135,7 +135,7 @@ var myappControllers =  angular.module('myApp.controllers', []);
 	}
         
 	scope.getBuckets = function() {		
-		scope.getData("http://localhost:8282/app/webresources/bucketlimits", null);
+		scope.getData("http://monthlybudgetapp.avijeetd.cloudbees.net/app/webresources/bucketlimits", null);
 	}
         /*
         scope.setBucket = function(bucket) {		
