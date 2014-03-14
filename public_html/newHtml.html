@@ -1,0 +1,59 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src='http://documentcloud.github.com/underscore/underscore-min.js'></script>
+        <script src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
+        <script src='http://backbonejs.org/backbone-min.js'></script>
+        <script src='../RestClient.js'></script>
+    </head>
+    <body>
+        <div id='header'></div>
+
+        <div id='sidebar'></div>
+
+        <div id='content'></div>
+
+
+        <!-- Templates -->
+        <script type='text/template' id='tpl-create'>
+            <!--
+            Put your controls to create new entity here.
+
+            Class 'new' is used to listen on events in JS code.
+            -->
+            <button class='new'>Create</button>
+        </script>
+
+        <script type='text/template' id='tpl-expenses-list-item'>
+            <!-- modify output display name for item here or change displayName in the JS model code -->
+            <a href='#<%= id %>'><%= displayName %></a>
+        </script>
+
+        <script type='text/template' id='tpl-expenses-details'>
+            <div>
+            <label>Id:</label>
+            <input type='text' id='id' name='id' value='<%= typeof(id)!== "undefined" ? id : "" %>'  />
+            <!--
+            Put your editing controls for model
+            attribute data (text fields, ...) here
+            <label>amount:</label>
+            <input type='text' id='amount' name='amount' value='<%= amount %>'/><label>description:</label>
+            <input type='text' id='description' name='description' value='<%= description %>'/>-->
+            <!--
+            Put your controls to create new entity here.
+            Classes 'save' and 'delete' are used to listen on events in JS code.
+            -->
+            <button  class='save'>Save</button>
+            <button  class='delete'>Delete</button>
+            </div>
+        </script>
+
+
+    </body>
+</html>

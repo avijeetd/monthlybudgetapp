@@ -1,0 +1,28 @@
+<p>This is the partial for view 2.</p>
+<p>
+<form>
+    <input hidden ng-model="expenseform.id"/>
+    <input hidden ng-model="expenseform.date"/>       
+    Expense Amount: <input type="text" ng-model="expenseform.amount"/><br>
+    Expense Description: <input type="text" ng-model="expenseform.description"/> <br>
+
+    Expense Type:
+    <select id="bucket" 
+            ng-model="expenseform.bucketTypeId"
+            ng-init="getBuckets()">
+        <!--     <option value="" selected="selected">basic</option> -->
+        <option ng-repeat="bucket in buckets"
+                value="{{bucket.bucketTypeId}}">
+            {{bucket.bucketType}}</option>
+    </select>
+    <br>
+    Expense Date:
+    <input type="text"  ng-model="currentdate"/><br>
+
+    <button type="submit" ng-click="saveExpenses()">submit</button> <br>
+    <form>
+        Showing of 'interpolate' filter:
+        {{ 'Current version is v%VERSION%.' | interpolate }}
+
+
+        </p>

@@ -1,0 +1,23 @@
+<p>This is the partial for view 1.</p>
+
+<u>Balance for the month</u>
+<div ng-init="getBalances()">
+    <ul>
+        <li ng-repeat="(key,data) in balances"> {{key}} -{{data}}
+
+
+
+        </li>
+    </ul>
+</div>
+
+<u>Expenses for the month</u>
+<div ng-init="getExpenses()">
+    <ul>
+        <li ng-repeat="expense in expenses"> {{expense.amount}} - {{expense.description}} - 
+
+            {{expense.bucketTypeId}}
+
+        </li>
+    </ul>
+</div>

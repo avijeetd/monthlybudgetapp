@@ -1,0 +1,39 @@
+<p>This is the partial for view 3.</p>
+<p>
+
+<form ng-init="getBuckets()">
+    
+    
+    <input hidden ng-model="bucketform.bucketTypeId"/>
+    Bucket Type:
+    <input type="text" ng-model="bucketform.bucketType" /><br>
+    Monthly Limit:
+    <input type="text" ng-model="bucketform.monthlyLimit"/><br>
+
+    <button type="submit" ng-click="saveNewBucket()">submit</button> <br>
+
+    
+        <ul>
+        <li ng-repeat="bucket in buckets"> {{bucket.bucketType}} - {{bucket.monthlyLimit}}
+        </li>
+    </ul>
+    
+    
+    
+<!--
+    <ul>
+        <li ng-repeat="bucket in buckets"> <a href="#/view3" ng-click="setBucket(bucket)">{{bucket.bucketType}}</a> - 
+            <a href="#/view3" ng-click="">{{bucket.monthlyLimit}}</a>
+        </li>
+    </ul>
+-->
+
+
+
+</form>
+
+Showing of 'interpolate' filter:
+{{ 'Current version is v%VERSION%.' | interpolate }}
+
+
+</p>
